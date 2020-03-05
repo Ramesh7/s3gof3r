@@ -30,6 +30,8 @@ type S3 struct {
 // Region returns the service region infering it from S3 domain.
 func (s *S3) Region() string {
 	region := os.Getenv("AWS_REGION")
+        fmt.Println("-----------------------------")
+        fmt.Println(region)
 	if region != "" {
 		return region
 	}
